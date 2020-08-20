@@ -1,0 +1,36 @@
+/* #3867d6  bwt background*/
+/* #4b7bec bwt kotak info */
+body{
+    margin: 0px;
+    background-color: #3867d6;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+h1{
+    line-height: 10px;
+}
+.fa{
+    background: transparent;
+    border: none;
+}
+#container{
+    background-color: #4b7bec;
+    text-align: center;
+}
+.user-stories{
+    text-align: left;
+}
+code{
+    background-color: #d1d8e0;
+}
+#footer{
+    text-align: center;
+    /* text-decoration: ; */
+}
+#linkInput{
+    font-family: Roboto;
+}

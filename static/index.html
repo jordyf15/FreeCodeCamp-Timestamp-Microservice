@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="/public/main.css" rel="stylesheet" type="text/css">
+    <!-- <script src="https://use.fontawesome.com/4bf3d7f622.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Jordy's FreeCodeCamp TimeStamp Microservice</h1>
+    </div>
+    <div id="container">
+        <h3>User Stories: </h3>
+        <ol class="user-stories">
+          
+            <li>The API endpoint is <code>GET [project_url]/api/timestamp/:date_string?</code></li>
+            <li>A date string is valid if can be successfully parsed by <code>new Date(date_string)</code>.<br>
+            Note that the unix timestamp needs to be an <strong>integer</strong> (not a string) specifying <strong>milliseconds</strong>.<br> 
+            In our test we will use date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.</li>
+            <li>If the date string is <strong>empty</strong> it should be equivalent to trigger <code>new Date()</code>, i.e. the service uses the current timestamp.</li>
+            <li>If the date string is <strong>valid</strong> the api returns a JSON having the structure<br><code>{"unix": &lt;date.getTime()&gt;, "utc" : &lt;date.toUTCString()&gt; }</code><br>
+              e.g. <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
+            <li>If the date string is <strong>invalid</strong> the api returns a JSON having the structure <br>
+                <code>{"error" : "Invalid Date" }</code>.
+            </li>
+          </ol>
+          <h3>Example Usage --> Example Output</h3>
+          <ul>
+            <li><a href="api/timestamp/2015-12-25">[project url]/api/timestamp/2015-12-25</a>-><code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code></li>
+            <li><a href="api/timestamp/1451001600000">[project url]/api/timestamp/1451001600000</a>--><code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code></li>
+          </ul>
+          <h3>Input Link here:</h3>
+          <textarea id="linkInput" cols="50" rows="1" placeholder="Input the API Endpoint here"></textarea><br>
+          <button onclick="location.href=test()">Go to link</button>
+    
+        </div>
+    <div id="footer">
+        Created by <a href="https://www.freecodecamp.org/jordyf">Jordy Ferdian</a>  
+        <button onclick="location.href='https://github.com/jordyf15'" class="fa fa-github fa-lg"></button>
+        <button onclick="location.href='https://www.linkedin.com/in/jordy-ferdian-3606041a7'" class="fa fa-linkedin-square fa-lg"></button><br>
+        For FreeCodeCamp <a href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice">
+            TimeStamp Microservice</a> project
+        
+    </div>
+    <script>
+        function test(){
+            return document.getElementById("linkInput").value;
+        }
+    </script>
+</body>
